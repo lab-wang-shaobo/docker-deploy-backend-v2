@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - new-grade-rule
   pull_request:
     branches:
       - main
+      - new-grade-rule
 
 jobs:
   build:

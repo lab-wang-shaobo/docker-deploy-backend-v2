@@ -1,7 +1,10 @@
 services:
   backend:
-    image: getcold/234-deploylab-backend:latest
+    image: getcold/234-deploylab-backend:new
     pull_policy: always
     ports:
-      - "8083:8080"
+      - "8083:8082"
+    environment:
+      - VITE_GRAPHQL_URI=http://98.86.222.62:8083/graphql
+      - VITE_SERVER_URI=http://98.86.222.62:8083
     restart: unless-stopped
